@@ -1,4 +1,3 @@
-
 ```text
 ===========================================================================
   __  __      _          _   _       _
@@ -6,7 +5,6 @@
  | |\/| |/ _ \ __/ _` | | |_| |/ _` | __/ _` |
  | |  | |  __/ || (_| | |  _  | (_| | || (_| |
  |_|  |_|\___|\__\__,_| |_| |_|\__,_|\__\__,_|
-
 ===========================================================================
 ```
 
@@ -73,6 +71,21 @@ Linux build layers required!
 1. Push your code to a GitHub repository.
 2. Import the repository into Vercel.
 3. Deploy! (The Next.js preset works out of the box).
+
+---------------------------------------------------------------------------
+🧙‍♂️ FOR THE TERMINAL NERDS
+---------------------------------------------------------------------------
+Skip the web interface and the browser headache entirely. If you're already
+living in the command line, you can nuke metadata locally using FFmpeg.
+
+Single file:
+$ ffmpeg -i input.jpg -map_metadata -1 -c:v copy -c:a copy clean_output.jpg
+
+Batch process an entire directory (Zsh/Bash):
+$ for f in *.{jpg,jpeg,png}; do ffmpeg -i "$f" -map_metadata -1 -c:v copy -c:a copy "clean_${f}"; done
+
+(Using -c:v copy and -c:a copy prevents quality loss by transferring the
+streams directly without re-encoding).
 
 ===========================================================================
 Built with Next.js, React, and FFmpeg.
