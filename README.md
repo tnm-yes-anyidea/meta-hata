@@ -1,40 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+===========================================================================
+  __  __      _          _   _       _
+ |  \/  | ___| |_ __ _  | | | | __ _| |_ __ _
+ | |\/| |/ _ \ __/ _` | | |_| |/ _` | __/ _` |
+ | |  | |  __/ || (_| | |  _  | (_| | || (_| |
+ |_|  |_|\___|\__\__,_| |_| |_|\__,_|\__\__,_|
+===========================================================================
 
-## Getting Started
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new)
+![Next.js](https://img.shields.io/badge/Next.js-black?style=for-the-badge&logo=next.js&logoColor=white)
+![FFmpeg](https://img.shields.io/badge/FFmpeg-007808?style=for-the-badge&logo=ffmpeg&logoColor=white)
 
-First, run the development server:
+"Hata" (हटा) means "Remove" in Hindi.
+Meta-Hata is a lightning-fast, serverless web application that extracts, displays, and completely obliterates hidden EXIF metadata from your images.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---------------------------------------------------------------------------
+🚨 CRITICAL PRIVACY & SECURITY WARNING 🚨
+---------------------------------------------------------------------------
+DO NOT UPLOAD CONFIDENTIAL, SENSITIVE, OR INTIMATE IMAGES.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+While Meta-Hata scrubs your files and immediately deletes them from the
+temporary /tmp storage, the images ARE still transmitted over the internet
+and processed on a cloud server (Vercel).
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+For highly classified or deeply personal material, ALWAYS use local,
+offline tools.
+---------------------------------------------------------------------------
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+📸 THE PROBLEM
+Every time you snap a photo, your device secretly embeds a digital
+fingerprint into the file. This can include:
+- The exact GPS coordinates of your location.
+- The make, model, and serial number of your phone/camera.
+- Timestamps, exposure settings, and software versions.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+🛡️ THE SOLUTION
+Meta-Hata acts as a digital carwash for your pictures.
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+✨ FEATURES
+* 🔍 Interactive X-Ray Vision: Upload an image and interactively expand categories to see the exact metadata payload hidden inside it.
+* 🧽 Deep Scrubbing: Utilizes FFmpeg's powerful `-map_metadata -1` flag to completely nuke all EXIF, XMP, and IPTC data.
+* ⚡ Quota Guardian: Built-in 4.5MB payload limit to protect your Vercel Free Tier limits from being exhausted by massive files.
+* 🚫 Zero Database: No accounts, no logs, no permanent storage.
 
-## Learn More
+---------------------------------------------------------------------------
+💻 LOCAL DEVELOPMENT
+---------------------------------------------------------------------------
+Want to run it locally on your own machine?
 
-To learn more about Next.js, take a look at the following resources:
+1. Install dependencies:
+   $ npm install
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+2. Fire up the development server:
+   $ npm run dev
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. Open your browser:
+   Navigate to http://localhost:3000
 
-## Deploy on Vercel
+---------------------------------------------------------------------------
+🚀 DEPLOYMENT (VERCEL FREE TIER)
+---------------------------------------------------------------------------
+This project is tailor-made for Vercel's Hobby Tier.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The magic happens via the `@ffmpeg-installer` and `@ffprobe-installer`
+packages, which automatically pull the correct static Linux binaries into
+your Vercel serverless environment during the build phase. No messy custom
+Linux build layers required!
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+1. Push your code to a GitHub repository.
+2. Import the repository into Vercel.
+3. Deploy! (The Next.js preset works out of the box).
+
+===========================================================================
+Built with Next.js, React, and FFmpeg.
+===========================================================================
