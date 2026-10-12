@@ -73,6 +73,14 @@ Linux build layers required!
 3. Deploy! (The Next.js preset works out of the box).
 
 ---------------------------------------------------------------------------
+📍 HOW TO TEST GPS SCRUBBING
+---------------------------------------------------------------------------
+Want to see the location extraction in action? You need the right kind of file.
+
+* DO USE: A fresh, mundane photo taken directly with your smartphone camera (ensure "Location Tags" or "Geotagging" is enabled in your camera settings). Transfer the raw .jpg or .jpeg file directly to your computer.
+* DO NOT USE: Screenshots, or images downloaded from WhatsApp, Discord, Instagram, or Twitter. Almost all social platforms and messaging apps automatically nuke EXIF data upon upload, meaning there will be no location data left to find in the first place.
+---------------------------------------------------------------------------
+
 🧙‍♂️ FOR THE TERMINAL NERDS
 ---------------------------------------------------------------------------
 Skip the web interface and the browser headache entirely. If you're already
@@ -87,6 +95,6 @@ $ for f in *.{jpg,jpeg,png}; do ffmpeg -i "$f" -map_metadata -1 -c:v copy -c:a c
 (Using -c:v copy and -c:a copy prevents quality loss by transferring the
 streams directly without re-encoding).
 
-===========================================================================
+=======================================================================
 Built with Next.js, React, and FFmpeg.
 ===========================================================================
